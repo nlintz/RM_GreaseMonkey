@@ -2,11 +2,11 @@
 // @name eBay to G4SI
 // @namespace http://www.facebook.com/mlintz
 // @description tranfers information from eBay to G4SI
-// @include https://ec2.g4si.com/Shipping/*
+// @include https://ec2.g4si.com/shipping/*
 // ==/UserScript==
-
 var alert_function = function() {
-	var shipping_info_string = document.getElementById('txtDescription').value;
+	alert('swag')
+	var shipping_info_string = document.getElementById('ctl00_cphContent_txtPurchaseOrder').value;
 	if (shipping_info_string.length < 3) {
 		return;
 	}
@@ -48,18 +48,8 @@ var alert_function = function() {
 	}
 };
 
-document.onload = page_setup() 
-
-var page_setup = function() {
-	alert("SWAG")
-	dropShipment_box = getElementById("ctl00_cphContent_dropShipment")
-	dropShipment_box.checked=true;
-}
 
 
-
-document.getElementById("ctl00_cphContent_dropShipment").checked = true; // bring down the drop shift button
-#document.getElementById("chkboxResidential").checked = true;
-#var text_area = document.getElementByID(ctl00_cphContent_dropShipEmail2);
-#var text_area = document.getElementById('txtDescription');
-#text_area.addEventListener('click', alert_function, false);
+var text_area = document.getElementByID("ctl00_cphContent_txtPurchaseOrder");
+alert('swag')
+text_area.addEventListener("click", alert_function, false);
